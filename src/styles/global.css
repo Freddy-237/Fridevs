@@ -6,22 +6,25 @@
  * Styles personnalisés pour le design premium sombre
  */
 
-@layer components {
-    /* Header avec effet de scroll */
-    .header-scrolled {
-        @apply bg-[#0B0E14]/90 backdrop-blur-md shadow-lg py-2 transition-all duration-300;
-    }
+/* Header avec effet de scroll */
+.header-scrolled {
+    background-color: rgba(11, 14, 20, 0.9);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
 
-    /* Animation de fade-in pour la navigation */
-    .fade-in-nav {
-        animation: fadeIn 0.4s ease forwards;
-        opacity: 0;
-    }
+/* Animation de fade-in pour la navigation */
+.fade-in-nav {
+    animation: fadeIn 0.4s ease forwards;
+    opacity: 0;
+}
 
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-5px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Scroll smooth pour toute la page */
@@ -61,7 +64,10 @@ html {
 
 /* Gradient text utility */
 .gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, rgb(192, 132, 252), rgb(147, 51, 234));
 }
 
 /* Glow effect pour les boutons */

@@ -31,6 +31,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="keywords" content="développement web, application mobile, solutions métiers, SEO, UI/UX, agence digitale, Cameroun" />
     <link rel="canonical" href={canonicalURL} />
     
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="/images/f.png" fetchpriority="high" />
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
@@ -48,12 +51,29 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:image" content={new URL(image, Astro.site)} />
     
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="/images/f.png" />
+    <link rel="icon" type="image/png" href="/images/icon.png" />
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NN5WKSRJ');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+    
+    <!-- Fonts - Optimisées pour performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -75,12 +95,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           "availableLanguage": ["fr", "en"]
         },
         "sameAs": [
-          "https://wa.me/237694634551"
+          "https://wa.me/237694634551",
+          "https://www.facebook.com/profile.php?id=61577729167828",
+          "https://www.instagram.com/fridevs237/"
         ]
       }
     </script>
   </head>
   <body class="text-gray-800 bg-[#0B0E14] overflow-x-hidden" style="font-family: 'Inter', system-ui, sans-serif;">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5WKSRJ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <slot />
   </body>
 </html>
