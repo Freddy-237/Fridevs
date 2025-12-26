@@ -1,11 +1,58 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+/**
+ * PAGE D'ACCUEIL
+ * 
+ * Architecture complète de la page d'accueil FRIDEVS
+ * Toutes les sections sont importées et assemblées ici
+ */
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+// Import des sections de la page d'accueil
+import Hero from "../components/Hero.astro";
+import ProblemeClients from "../components/ProblemeClients.astro";
+import SolutionsFridevs from "../components/SolutionsFridevs.astro";
+import ProcessTravail from "../components/ProcessTravail.astro";
+import Realisations from "../components/Realisations.astro";
+import Credibilite from "../components/Credibilite.astro";
+import CtaFinal from "../components/CtaFinal.astro";
+
+const pageTitle = "FRIDEVS - Agence Digitale | Développement Web & Mobile Premium";
+const pageDescription = "Transformez votre vision en solutions digitales performantes. Applications web, mobiles et outils métiers sur mesure. Devis gratuit sous 48h. Accompagnement de A à Z.";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Header sticky -->
+  <Header />
+
+  <!-- Contenu principal -->
+  <main>
+    
+    <!-- Section 1: Hero - Présentation principale -->
+    <Hero />
+
+    <!-- Section 2: Problèmes Clients - Les défis digitaux -->
+    <ProblemeClients />
+
+    <!-- Section 3: Solutions FRIDEVS - Nos expertises -->
+    <SolutionsFridevs />
+
+    <!-- Section 4: Process de travail - Notre méthode -->
+    <ProcessTravail />
+
+    <!-- Section 5: Réalisations - Projets en vedette -->
+    <Realisations />
+
+    <!-- Section 6: Crédibilité - Technologies et chiffres clés -->
+    <Credibilite />
+
+    <!-- Section 7: CTA Final - Demander un devis -->
+    <CtaFinal />
+
+  </main>
+
+  <!-- Footer -->
+  <Footer />
 </Layout>

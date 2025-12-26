@@ -1,0 +1,525 @@
+---
+/**
+ * ÉTUDE DE CAS - INUBIL
+ * 
+ * CRM sur mesure pour optimisation commerciale
+ */
+
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const pageTitle = "Étude de Cas : INUBIL - CRM Sur Mesure | FRIDEVS";
+const pageDescription = "Découvrez comment nous avons développé un CRM personnalisé pour optimiser la gestion commerciale et augmenter la productivité de 35%.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main>
+    
+    <!-- 1. HERO PROJET -->
+    <section class="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-[#0B0E14] via-[#1a062e] to-[#2A234A] pt-28 pb-16">
+      
+      <!-- Background pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div style="background-image: linear-gradient(rgba(139, 92, 246, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.15) 1px, transparent 1px); background-size: 60px 60px; width: 100%; height: 100%;"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6">
+        
+        <!-- Breadcrumb -->
+        <nav class="text-sm text-gray-400 mb-8" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-purple-400 transition-colors">Accueil</a>
+          <span class="mx-2">/</span>
+          <a href="/realisations" class="hover:text-purple-400 transition-colors">Réalisations</a>
+          <span class="mx-2">/</span>
+          <span class="text-purple-400">INUBIL</span>
+        </nav>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          
+          <!-- Colonne gauche : Info -->
+          <div class="space-y-6">
+            
+            <!-- Tag service -->
+            <div class="flex gap-3">
+              <span class="px-4 py-2 bg-purple-600/20 text-purple-400 text-sm font-semibold rounded-lg border border-purple-500/30">
+                CRM / Solution métier
+              </span>
+            </div>
+
+            <!-- Titre projet -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight" style="font-family: 'DM Sans', sans-serif;">
+              INUBIL
+            </h1>
+
+            <!-- Description courte -->
+            <p class="text-xl md:text-2xl text-gray-300 leading-relaxed">
+              Solution CRM sur mesure pour optimiser la gestion des relations clients et automatiser les processus commerciaux
+            </p>
+
+            <!-- Infos projet -->
+            <div class="grid grid-cols-2 gap-6 pt-4">
+              <div>
+                <p class="text-gray-500 text-sm mb-1">Secteur</p>
+                <p class="text-white font-semibold text-lg">Services B2B</p>
+              </div>
+              <div>
+                <p class="text-gray-500 text-sm mb-1">Durée</p>
+                <p class="text-white font-semibold text-lg">3 mois</p>
+              </div>
+              <div>
+                <p class="text-gray-500 text-sm mb-1">Technologies</p>
+                <p class="text-white font-semibold text-lg">React, Node.js, PostgreSQL</p>
+              </div>
+              <div>
+                <p class="text-gray-500 text-sm mb-1">Équipe</p>
+                <p class="text-white font-semibold text-lg">4 personnes</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Colonne droite : Visuel -->
+          <div class="relative">
+            <div class="aspect-square bg-gradient-to-br from-purple-900/30 to-purple-600/20 rounded-2xl border border-purple-500/30 flex items-center justify-center backdrop-blur-sm">
+              <svg class="w-40 h-40 text-purple-400/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 2. CONTEXTE & OBJECTIF -->
+    <section class="py-20 bg-[#111827]">
+      <div class="max-w-5xl mx-auto px-6">
+        
+        <div class="space-y-8">
+          
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+              Contexte & Objectif
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full"></div>
+          </div>
+
+          <!-- Le client -->
+          <div class="bg-[#0B0E14] rounded-2xl p-8 border border-gray-800">
+            <h3 class="text-xl font-bold text-purple-400 mb-4" style="font-family: 'Space Grotesk', sans-serif;">
+              Le client
+            </h3>
+            <p class="text-gray-300 text-lg leading-relaxed">
+              Entreprise spécialisée dans les services B2B, gérant un portefeuille de plus de 200 clients actifs avec une équipe commerciale de 12 personnes.
+            </p>
+          </div>
+
+          <!-- Le problème -->
+          <div class="bg-[#0B0E14] rounded-2xl p-8 border border-gray-800">
+            <h3 class="text-xl font-bold text-purple-400 mb-4" style="font-family: 'Space Grotesk', sans-serif;">
+              Le problème initial
+            </h3>
+            <ul class="space-y-3 text-gray-300 text-lg">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-red-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span>Données clients éparpillées entre plusieurs fichiers Excel</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-red-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span>Pas de suivi centralisé des interactions commerciales</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-red-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span>Perte de temps dans la génération de rapports manuels</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-red-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span>Opportunités commerciales perdues par manque de visibilité</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Objectifs -->
+          <div class="bg-[#0B0E14] rounded-2xl p-8 border border-gray-800">
+            <h3 class="text-xl font-bold text-purple-400 mb-4" style="font-family: 'Space Grotesk', sans-serif;">
+              Objectifs du projet
+            </h3>
+            <ul class="space-y-3 text-gray-300 text-lg">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Centraliser toutes les données clients dans une seule plateforme</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Automatiser le suivi des interactions et relances</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Générer des rapports analytiques en temps réel</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Améliorer la collaboration entre équipes</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SOLUTION FRIDEVS -->
+    <section class="py-20 bg-[#0B0E14]">
+      <div class="max-w-5xl mx-auto px-6">
+        
+        <div class="space-y-8">
+          
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+              La solution FRIDEVS
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full"></div>
+          </div>
+
+          <p class="text-xl text-gray-300 leading-relaxed">
+            Nous avons conçu et développé un CRM personnalisé qui répond précisément aux besoins métier de l'entreprise, avec une interface intuitive et des fonctionnalités adaptées au processus commercial existant.
+          </p>
+
+          <!-- Fonctionnalités clés -->
+          <div class="grid md:grid-cols-2 gap-6">
+            
+            <!-- Feature 1 -->
+            <div class="bg-[#111827] rounded-xl p-6 border border-gray-800">
+              <div class="flex items-start gap-4">
+                <div class="p-3 bg-purple-600/10 rounded-lg">
+                  <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-2">Gestion clients centralisée</h4>
+                  <p class="text-gray-400">Fiche client complète avec historique des interactions, documents et notes partagées</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-[#111827] rounded-xl p-6 border border-gray-800">
+              <div class="flex items-start gap-4">
+                <div class="p-3 bg-purple-600/10 rounded-lg">
+                  <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-2">Suivi automatique</h4>
+                  <p class="text-gray-400">Alertes et relances automatiques basées sur le cycle de vente</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-[#111827] rounded-xl p-6 border border-gray-800">
+              <div class="flex items-start gap-4">
+                <div class="p-3 bg-purple-600/10 rounded-lg">
+                  <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-2">Tableaux de bord analytics</h4>
+                  <p class="text-gray-400">Visualisation en temps réel des KPIs commerciaux et pipeline</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-[#111827] rounded-xl p-6 border border-gray-800">
+              <div class="flex items-start gap-4">
+                <div class="p-3 bg-purple-600/10 rounded-lg">
+                  <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-2">Application mobile</h4>
+                  <p class="text-gray-400">Accès terrain pour les commerciaux avec mode hors ligne</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. TECHNOLOGIES -->
+    <section class="py-20 bg-[#111827]">
+      <div class="max-w-5xl mx-auto px-6">
+        
+        <div class="space-y-8">
+          
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+              Stack technique
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full"></div>
+          </div>
+
+          <!-- Grid technologies -->
+          <div class="grid md:grid-cols-3 gap-6">
+            
+            <!-- Frontend -->
+            <div class="bg-[#0B0E14] rounded-xl p-6 border border-gray-800">
+              <h4 class="text-lg font-bold text-purple-400 mb-4">Frontend</h4>
+              <ul class="space-y-2 text-gray-300">
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  React 18
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  TypeScript
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  Tailwind CSS
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  Chart.js
+                </li>
+              </ul>
+            </div>
+
+            <!-- Backend -->
+            <div class="bg-[#0B0E14] rounded-xl p-6 border border-gray-800">
+              <h4 class="text-lg font-bold text-purple-400 mb-4">Backend</h4>
+              <ul class="space-y-2 text-gray-300">
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  Node.js
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  Express.js
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  PostgreSQL
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  Redis (cache)
+                </li>
+              </ul>
+            </div>
+
+            <!-- Infrastructure -->
+            <div class="bg-[#0B0E14] rounded-xl p-6 border border-gray-800">
+              <h4 class="text-lg font-bold text-purple-400 mb-4">Infrastructure</h4>
+              <ul class="space-y-2 text-gray-300">
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  Docker
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  AWS (EC2, S3)
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  CI/CD GitHub Actions
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  SSL/TLS
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. RÉSULTATS -->
+    <section class="py-20 bg-[#0B0E14]">
+      <div class="max-w-5xl mx-auto px-6">
+        
+        <div class="space-y-8">
+          
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+              Résultats obtenus
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full"></div>
+          </div>
+
+          <!-- Chiffres clés -->
+          <div class="grid md:grid-cols-3 gap-6">
+            
+            <!-- Résultat 1 -->
+            <div class="bg-gradient-to-br from-purple-900/20 to-purple-600/10 rounded-2xl p-8 border border-purple-500/30 text-center">
+              <div class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 mb-3">
+                +35%
+              </div>
+              <p class="text-xl text-gray-300 font-semibold mb-2">Productivité</p>
+              <p class="text-gray-400 text-sm">Gain de temps moyen par commercial</p>
+            </div>
+
+            <!-- Résultat 2 -->
+            <div class="bg-gradient-to-br from-purple-900/20 to-purple-600/10 rounded-2xl p-8 border border-purple-500/30 text-center">
+              <div class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 mb-3">
+                -25%
+              </div>
+              <p class="text-xl text-gray-300 font-semibold mb-2">Temps de traitement</p>
+              <p class="text-gray-400 text-sm">Réduction du cycle de vente</p>
+            </div>
+
+            <!-- Résultat 3 -->
+            <div class="bg-gradient-to-br from-purple-900/20 to-purple-600/10 rounded-2xl p-8 border border-purple-500/30 text-center">
+              <div class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 mb-3">
+                100%
+              </div>
+              <p class="text-xl text-gray-300 font-semibold mb-2">Adoption équipe</p>
+              <p class="text-gray-400 text-sm">Tous les commerciaux utilisent le CRM quotidiennement</p>
+            </div>
+
+          </div>
+
+          <!-- Bénéfices concrets -->
+          <div class="bg-[#111827] rounded-2xl p-8 border border-gray-800">
+            <h3 class="text-xl font-bold text-purple-400 mb-6" style="font-family: 'Space Grotesk', sans-serif;">
+              Bénéfices concrets
+            </h3>
+            <ul class="space-y-4 text-gray-300 text-lg">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Visibilité complète sur le pipeline commercial en temps réel</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Aucune opportunité commerciale perdue grâce aux alertes automatiques</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Rapports générés automatiquement chaque lundi matin</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Meilleure collaboration entre équipes commerciales et support</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. TÉMOIGNAGE -->
+    <section class="py-20 bg-gradient-to-br from-[#2A234A] to-[#1a062e]">
+      <div class="max-w-4xl mx-auto px-6">
+        
+        <div class="text-center space-y-8">
+          
+          <!-- Quote icon -->
+          <svg class="w-16 h-16 text-purple-400/40 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+          </svg>
+
+          <!-- Citation -->
+          <blockquote class="text-2xl md:text-3xl text-white leading-relaxed italic font-light">
+            « Le CRM développé par FRIDEVS a transformé notre façon de travailler. Nous avons enfin une vision claire de notre activité commerciale et nos équipes sont beaucoup plus efficaces. »
+          </blockquote>
+
+          <!-- Auteur -->
+          <div class="pt-6">
+            <p class="text-xl font-bold text-purple-300">Jean-Marc D.</p>
+            <p class="text-gray-400">Directeur Commercial</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. CTA PROJET -->
+    <section class="py-20 bg-[#111827]">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" style="font-family: 'DM Sans', sans-serif;">
+          Vous avez un projet similaire ?
+        </h2>
+
+        <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+          Nous développons des solutions sur mesure adaptées à vos besoins métier. Discutons de votre projet.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          
+          <a 
+            href="https://wa.me/237694634551?text=Bonjour%2C%20j'ai%20vu%20le%20projet%20INUBIL%20et%20je%20souhaite%20discuter%20d'un%20projet%20similaire" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105"
+            style="font-family: 'Space Grotesk', sans-serif;"
+          >
+            Demander un devis
+            <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+          </a>
+
+          <a 
+            href="/realisations" 
+            class="inline-flex items-center justify-center px-8 py-4 bg-transparent hover:bg-white/5 text-white text-lg font-semibold rounded-lg transition-all duration-300 border-2 border-gray-700 hover:border-purple-500"
+            style="font-family: 'Space Grotesk', sans-serif;"
+          >
+            Voir d'autres projets
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

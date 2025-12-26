@@ -1,0 +1,545 @@
+---
+/**
+ * PAGE SERVICES
+ * 
+ * Présentation des 4 services principaux de FRIDEVS
+ */
+
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const pageTitle = "Nos Services - Développement Web, Mobile, SEO & UI/UX | FRIDEVS";
+const pageDescription = "Découvrez nos services premium : développement web & mobile sur mesure, solutions métiers innovantes, optimisation SEO et design UI/UX. Expertise complète pour votre transformation digitale.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main>
+    
+    <!-- HERO SERVICES -->
+    <section class="relative min-h-[60vh] flex items-center overflow-hidden bg-gradient-to-b from-[#3B2667] via-[#553C9A] to-[#7C3AED] pt-28 pb-16 md:pt-32 md:pb-20">
+      
+      <div class="absolute inset-0 opacity-10">
+        <div style="background-image: linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px); background-size: 50px 50px; width: 100%; height: 100%;"></div>
+      </div>
+
+      <div class="relative max-w-6xl mx-auto px-6 text-center">
+        
+        <!-- Breadcrumb -->
+        <nav class="text-sm text-gray-400 mb-6">
+          <a href="/" class="hover:text-purple-400 transition-colors">Accueil</a>
+          <span class="mx-2">/</span>
+          <span class="text-white">Services</span>
+        </nav>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style="font-family: 'DM Sans', sans-serif;">
+          Des solutions digitales 
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
+            pensées pour votre croissance
+          </span>
+        </h1>
+
+        <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          Nous transformons vos ambitions en outils digitaux performants, sécurisés et évolutifs.
+        </p>
+
+        <a 
+          href="https://wa.me/237694634551" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105"
+          style="font-family: 'Space Grotesk', sans-serif;"
+        >
+          Discutons de votre projet
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section class="py-20 bg-[#0B0E14]">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <!-- SERVICE 1 : Développement Web & Mobile -->
+        <div class="mb-20 pb-20 border-b border-gray-800">
+          
+          <div class="grid md:grid-cols-2 gap-12 items-start">
+            
+            <!-- Texte -->
+            <div>
+              <div class="inline-block px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm font-semibold mb-4">
+                Service 01
+              </div>
+              
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+                Développement Web & Mobile
+              </h2>
+              
+              <p class="text-xl text-purple-300 mb-6">
+                Des plateformes web et applications conçues pour durer
+              </p>
+
+              <p class="text-gray-400 leading-relaxed mb-6">
+                Nous créons des sites vitrines premium, des applications web performantes et des backends sécurisés. Chaque solution est pensée pour offrir une expérience utilisateur exceptionnelle et une évolutivité maximale.
+              </p>
+
+              <!-- Points clés -->
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Sites web sur mesure optimisés SEO</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Applications web progressives (PWA)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">APIs REST & GraphQL sécurisées</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Applications mobiles cross-platform</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Technologies -->
+            <div class="bg-[#111827] p-8 rounded-2xl border border-gray-800">
+              <h3 class="text-lg font-semibold text-white mb-6" style="font-family: 'Space Grotesk', sans-serif;">
+                Technologies utilisées
+              </h3>
+              
+              <div class="grid grid-cols-3 gap-6">
+                <div class="text-center">
+                  <div class="w-16 h-16 mx-auto mb-2 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                  </div>
+                  <p class="text-sm text-gray-400">React</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-16 h-16 mx-auto mb-2 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <p class="text-sm text-gray-400">Next.js</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-16 h-16 mx-auto mb-2 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                    </svg>
+                  </div>
+                  <p class="text-sm text-gray-400">Node.js</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-16 h-16 mx-auto mb-2 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <p class="text-sm text-gray-400">TypeScript</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-16 h-16 mx-auto mb-2 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                    </svg>
+                  </div>
+                  <p class="text-sm text-gray-400">Tailwind</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-16 h-16 mx-auto mb-2 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                    </svg>
+                  </div>
+                  <p class="text-sm text-gray-400">MongoDB</p>
+                </div>
+              </div>
+
+              <div class="mt-8 p-4 bg-purple-500/5 border border-purple-500/20 rounded-lg">
+                <p class="text-sm text-gray-300 italic">
+                  Chaque solution FRIDEVS est pensée pour la performance, la sécurité et l'évolutivité.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- SERVICE 2 : Solutions Métiers Sur Mesure -->
+        <div class="mb-20 pb-20 border-b border-gray-800">
+          
+          <div class="grid md:grid-cols-2 gap-12 items-start">
+            
+            <!-- Texte -->
+            <div>
+              <div class="inline-block px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm font-semibold mb-4">
+                Service 02
+              </div>
+              
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+                Solutions Métiers Sur Mesure
+              </h2>
+              
+              <p class="text-xl text-purple-300 mb-6">
+                Des outils digitaux alignés sur vos processus
+              </p>
+
+              <p class="text-gray-400 leading-relaxed mb-6">
+                Nous développons des outils internes qui simplifient vos opérations quotidiennes. Dashboards intelligents, systèmes de gestion personnalisés, automatisations métier : tout est conçu pour gagner du temps et améliorer l'efficacité.
+              </p>
+
+              <!-- Points clés -->
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Outils de gestion personnalisés (CRM, ERP)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Automatisation des processus métier</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Dashboards et reporting en temps réel</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Intégrations API tierces</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Résultats attendus -->
+            <div class="space-y-4">
+              <h3 class="text-lg font-semibold text-white mb-6" style="font-family: 'Space Grotesk', sans-serif;">
+                Résultats attendus
+              </h3>
+              
+              <div class="bg-[#111827] p-6 rounded-xl border border-gray-800">
+                <div class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 mb-2">
+                  -40%
+                </div>
+                <p class="text-white font-semibold mb-1">Temps de traitement réduit</p>
+                <p class="text-sm text-gray-400">Automatisation des tâches répétitives</p>
+              </div>
+
+              <div class="bg-[#111827] p-6 rounded-xl border border-gray-800">
+                <div class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 mb-2">
+                  +60%
+                </div>
+                <p class="text-white font-semibold mb-1">Efficacité opérationnelle</p>
+                <p class="text-sm text-gray-400">Processus optimisés et centralisés</p>
+              </div>
+
+              <div class="bg-[#111827] p-6 rounded-xl border border-gray-800">
+                <div class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 mb-2">
+                  100%
+                </div>
+                <p class="text-white font-semibold mb-1">Données en temps réel</p>
+                <p class="text-sm text-gray-400">Visibilité complète sur vos opérations</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- SERVICE 3 : SEO & Visibilité Digitale -->
+        <div class="mb-20 pb-20 border-b border-gray-800">
+          
+          <div class="grid md:grid-cols-2 gap-12 items-start">
+            
+            <!-- Texte -->
+            <div>
+              <div class="inline-block px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm font-semibold mb-4">
+                Service 03
+              </div>
+              
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+                SEO & Visibilité Digitale
+              </h2>
+              
+              <p class="text-xl text-purple-300 mb-6">
+                Attirez des prospects qualifiés, durablement
+              </p>
+
+              <p class="text-gray-400 leading-relaxed mb-6">
+                Nous optimisons votre présence en ligne pour générer du trafic qualifié. SEO technique, performance web, stratégie de contenu : nous vous positionnons durablement sur les moteurs de recherche.
+              </p>
+
+              <!-- Points clés -->
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Audit SEO technique complet</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Optimisation de la performance (Core Web Vitals)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Stratégie de contenu & mots-clés</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Suivi et reporting mensuel</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Enjeux -->
+            <div class="bg-[#111827] p-8 rounded-2xl border border-gray-800">
+              <h3 class="text-lg font-semibold text-white mb-6" style="font-family: 'Space Grotesk', sans-serif;">
+                Les enjeux que nous résolvons
+              </h3>
+              
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-white font-semibold mb-1">Faible visibilité en ligne</p>
+                    <p class="text-sm text-gray-400">Votre site n'apparaît pas dans les résultats de recherche</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-white font-semibold mb-1">Performance médiocre</p>
+                    <p class="text-sm text-gray-400">Temps de chargement lent qui fait fuir les visiteurs</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-white font-semibold mb-1">Manque de trafic qualifié</p>
+                    <p class="text-sm text-gray-400">Peu de visiteurs réellement intéressés par vos services</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-white font-semibold mb-1">Absence de stratégie long terme</p>
+                    <p class="text-sm text-gray-400">Actions ponctuelles sans vision d'ensemble</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- SERVICE 4 : UI/UX & Branding -->
+        <div>
+          
+          <div class="grid md:grid-cols-2 gap-12 items-start">
+            
+            <!-- Texte -->
+            <div>
+              <div class="inline-block px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm font-semibold mb-4">
+                Service 04
+              </div>
+              
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+                UI/UX & Branding
+              </h2>
+              
+              <p class="text-xl text-purple-300 mb-6">
+                Une image de marque forte et cohérente
+              </p>
+
+              <p class="text-gray-400 leading-relaxed mb-6">
+                Nous concevons des interfaces élégantes et une identité visuelle qui vous distingue. Chaque élément est pensé pour créer une expérience utilisateur mémorable et renforcer votre crédibilité.
+              </p>
+
+              <!-- Points clés -->
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Design d'interface moderne et intuitif</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Expérience utilisateur (UX) optimisée</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Identité visuelle complète (logo, charte graphique)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Design system pour la cohérence</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Process -->
+            <div class="bg-gradient-to-br from-[#2A234A] to-[#1a062e] p-8 rounded-2xl border border-purple-500/20">
+              <h3 class="text-lg font-semibold text-white mb-6" style="font-family: 'Space Grotesk', sans-serif;">
+                Notre processus créatif
+              </h3>
+              
+              <div class="space-y-6">
+                <div class="flex gap-4">
+                  <div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">
+                    1
+                  </div>
+                  <div>
+                    <p class="text-white font-semibold mb-1">Recherche & Brief</p>
+                    <p class="text-sm text-gray-400">Compréhension de votre marque et vos objectifs</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">
+                    2
+                  </div>
+                  <div>
+                    <p class="text-white font-semibold mb-1">Moodboard & Wireframes</p>
+                    <p class="text-sm text-gray-400">Exploration visuelle et architecture</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">
+                    3
+                  </div>
+                  <div>
+                    <p class="text-white font-semibold mb-1">Design UI</p>
+                    <p class="text-sm text-gray-400">Création des interfaces haute fidélité</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">
+                    4
+                  </div>
+                  <div>
+                    <p class="text-white font-semibold mb-1">Prototype & Tests</p>
+                    <p class="text-sm text-gray-400">Validation de l'expérience utilisateur</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">
+                    5
+                  </div>
+                  <div>
+                    <p class="text-white font-semibold mb-1">Livraison & Guidelines</p>
+                    <p class="text-sm text-gray-400">Assets finaux et charte graphique</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="py-12 bg-gradient-to-br from-[#2A234A] to-[#1a062e] relative overflow-hidden">
+      
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-10 right-10 w-64 h-64 bg-purple-500 rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-10 left-10 w-96 h-96 bg-purple-600 rounded-full filter blur-3xl"></div>
+      </div>
+
+      <div class="relative max-w-4xl mx-auto px-6 text-center">
+        
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight" style="font-family: 'DM Sans', sans-serif;">
+          Prêt à transformer votre 
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-white">
+            vision en réalité
+          </span> ?
+        </h2>
+
+        <p class="text-lg text-gray-300 mb-6">
+          Échangeons sur votre projet. Devis gratuit sous 48h, sans engagement.
+        </p>
+
+        <a 
+          href="https://wa.me/237694634551" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-700 font-bold text-base rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:scale-105"
+          style="font-family: 'Space Grotesk', sans-serif;"
+        >
+          Demander un devis gratuit
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

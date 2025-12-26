@@ -1,0 +1,187 @@
+---
+/**
+ * SECTION PROCESS DE TRAVAIL
+ * 
+ * Timeline horizontale montrant les 5 étapes de la méthode FRIDEVS
+ * Design: Dégradé sombre avec étapes numérotées
+ * Animation: Step reveal au scroll
+ */
+---
+
+<!-- SECTION PROCESS DE TRAVAIL -->
+<section class="py-20 bg-gradient-to-br from-[#0B0E14] to-[#1a062e]">
+  
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Titre -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+        Notre 
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
+          méthode
+        </span>
+      </h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        Une approche claire, orientée résultats pour transformer vos idées en solutions concrètes
+      </p>
+    </div>
+
+    <!-- Timeline horizontale -->
+    <div class="relative">
+      
+      <!-- Ligne de connexion (desktop) -->
+      <div class="hidden lg:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 process-line"></div>
+
+      <!-- Grille des étapes -->
+      <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4">
+        
+        <!-- Étape 1: Analyse & cadrage -->
+        <div class="process-step text-center group" data-step="1">
+          
+          <!-- Cercle numéroté -->
+          <div class="relative inline-flex items-center justify-center w-20 h-20 mb-6 mx-auto">
+            <div class="absolute inset-0 bg-purple-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity"></div>
+            <div class="absolute inset-2 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/50">
+              <span class="text-2xl font-bold text-white">1</span>
+            </div>
+          </div>
+
+          <!-- Icône -->
+          <div class="w-12 h-12 mx-auto mb-4 text-purple-400">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+            </svg>
+          </div>
+
+          <!-- Texte -->
+          <h3 class="text-xl font-bold text-white mb-2" style="font-family: 'Space Grotesk', sans-serif;">
+            Analyse & cadrage
+          </h3>
+          <p class="text-gray-400 text-sm">
+            Compréhension approfondie de vos besoins et objectifs métier
+          </p>
+        </div>
+
+        <!-- Étape 2: Design UX/UI -->
+        <div class="process-step text-center group" data-step="2">
+          
+          <div class="relative inline-flex items-center justify-center w-20 h-20 mb-6 mx-auto">
+            <div class="absolute inset-0 bg-purple-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity"></div>
+            <div class="absolute inset-2 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/50">
+              <span class="text-2xl font-bold text-white">2</span>
+            </div>
+          </div>
+
+          <div class="w-12 h-12 mx-auto mb-4 text-purple-400">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2" style="font-family: 'Space Grotesk', sans-serif;">
+            Design UX/UI
+          </h3>
+          <p class="text-gray-400 text-sm">
+            Conception centrée utilisateur pour une expérience optimale
+          </p>
+        </div>
+
+        <!-- Étape 3: Développement -->
+        <div class="process-step text-center group" data-step="3">
+          
+          <div class="relative inline-flex items-center justify-center w-20 h-20 mb-6 mx-auto">
+            <div class="absolute inset-0 bg-purple-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity"></div>
+            <div class="absolute inset-2 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/50">
+              <span class="text-2xl font-bold text-white">3</span>
+            </div>
+          </div>
+
+          <div class="w-12 h-12 mx-auto mb-4 text-purple-400">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2" style="font-family: 'Space Grotesk', sans-serif;">
+            Développement
+          </h3>
+          <p class="text-gray-400 text-sm">
+            Code fiable, scalable et maintenable avec les meilleures pratiques
+          </p>
+        </div>
+
+        <!-- Étape 4: Tests & mise en ligne -->
+        <div class="process-step text-center group" data-step="4">
+          
+          <div class="relative inline-flex items-center justify-center w-20 h-20 mb-6 mx-auto">
+            <div class="absolute inset-0 bg-purple-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity"></div>
+            <div class="absolute inset-2 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/50">
+              <span class="text-2xl font-bold text-white">4</span>
+            </div>
+          </div>
+
+          <div class="w-12 h-12 mx-auto mb-4 text-purple-400">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2" style="font-family: 'Space Grotesk', sans-serif;">
+            Tests & mise en ligne
+          </h3>
+          <p class="text-gray-400 text-sm">
+            Validation rigoureuse et déploiement sécurisé en production
+          </p>
+        </div>
+
+        <!-- Étape 5: Suivi & évolution -->
+        <div class="process-step text-center group" data-step="5">
+          
+          <div class="relative inline-flex items-center justify-center w-20 h-20 mb-6 mx-auto">
+            <div class="absolute inset-0 bg-purple-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity"></div>
+            <div class="absolute inset-2 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/50">
+              <span class="text-2xl font-bold text-white">5</span>
+            </div>
+          </div>
+
+          <div class="w-12 h-12 mx-auto mb-4 text-purple-400">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2" style="font-family: 'Space Grotesk', sans-serif;">
+            Suivi & évolution
+          </h3>
+          <p class="text-gray-400 text-sm">
+            Maintenance, optimisation et évolutions continues
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-16">
+      <a 
+        href="/process" 
+        class="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium text-lg group/link"
+        style="font-family: 'Space Grotesk', sans-serif;"
+      >
+        <span class="relative">
+          En savoir plus sur notre méthode
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 group-hover/link:w-full transition-all duration-300"></span>
+        </span>
+        <svg class="ml-2 w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Script pour l'animation du Process au scroll -->
+<script type="module" src="/js/process-animation.js" defer></script>

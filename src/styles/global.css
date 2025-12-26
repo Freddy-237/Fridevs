@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/**
+ * STYLES GLOBAUX FRIDEVS
+ * 
+ * Styles personnalisés pour le design premium sombre
+ */
+
+@layer components {
+    /* Header avec effet de scroll */
+    .header-scrolled {
+        @apply bg-[#0B0E14]/90 backdrop-blur-md shadow-lg py-2 transition-all duration-300;
+    }
+
+    /* Animation de fade-in pour la navigation */
+    .fade-in-nav {
+        animation: fadeIn 0.4s ease forwards;
+        opacity: 0;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-5px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+}
+
+/* Scroll smooth pour toute la page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style pour les barres de défilement (webkit) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B0E14;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8B5CF6;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7C3AED;
+}
+
+/* Animation pour les éléments au scroll */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gradient text utility */
+.gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600;
+}
+
+/* Glow effect pour les boutons */
+.btn-glow {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.7);
+}
+
