@@ -10,16 +10,21 @@ interface Props {
   description?: string;
   image?: string;
   type?: string;
+  noindex?: boolean;
 }
 
 const {
   title = "FRIDEVS - Solutions Digitales Sur Mesure | Développement Web & Mobile",
   description = "Nous développons des sites web, applications et outils métiers performants pour accélérer la croissance de votre entreprise. Expertise en développement web/mobile, solutions métiers, SEO et UI/UX.",
   image = "/images/og-fridevs.png",
-  type = "website"
+  type = "website",
+  noindex = false
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// URL propre : sans ".html", sans "/index" et sans slash final (sauf la racine)
+const cleanPath =
+  Astro.url.pathname.replace(/\.html$/, "").replace(/\/index$/, "").replace(/\/+$/, "") || "/";
+const canonicalURL = new URL(cleanPath, Astro.site);
 ---
 
 <html lang="fr">
@@ -30,7 +35,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- SEO Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
     <meta name="author" content="FRIDEVS" />
     <link rel="canonical" href={canonicalURL} />
     
@@ -57,7 +62,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:image" content={new URL(image, Astro.site)} />
     
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="/images/icon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0B0E14" />
     
     <!-- Consent Mode v2 : mesure d'audience refusée par défaut, jusqu'au choix du visiteur -->
     <script is:inline>
