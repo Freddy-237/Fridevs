@@ -1,0 +1,88 @@
+---
+import LegalPage from "../layouts/LegalPage.astro";
+
+const email = "contact@fridevs.com";
+---
+
+<LegalPage
+  title="Politique de confidentialité | FRIDEVS"
+  description="Comment FRIDEVS collecte, utilise et protège vos données personnelles sur fridevs.com."
+  heading="Politique de confidentialité"
+  updated="15 novembre 2026"
+>
+  <h2>1. Responsable du traitement</h2>
+  <p>
+    Les données collectées sur fridevs.com sont traitées par <strong>FRIDEVS</strong>
+    (voir les <a href="/mentions-legales">mentions légales</a>). Contact :
+    <a href={`mailto:${email}`}>{email}</a>.
+  </p>
+
+  <h2>2. Données collectées</h2>
+  <p><strong>Formulaire de contact.</strong> Lorsque vous remplissez le formulaire, vous nous transmettez :</p>
+  <ul>
+    <li>votre nom et votre adresse e-mail ;</li>
+    <li>votre numéro de téléphone (facultatif) ;</li>
+    <li>le type de projet, le budget estimatif (facultatif) et votre message.</li>
+  </ul>
+  <p>
+    Ces informations ne sont pas enregistrées sur notre site : elles sont mises en forme dans un message
+    WhatsApp que vous choisissez d'envoyer. Elles sont alors traitées par WhatsApp (Meta) selon sa
+    propre politique de confidentialité, puis conservées dans notre messagerie.
+  </p>
+  <p>
+    <strong>Mesure d'audience.</strong> Le site utilise Google Tag Manager, qui peut charger des outils de
+    mesure d'audience (par exemple Google Analytics). Ces outils déposent des cookies et collectent des
+    données techniques : pages consultées, durée de visite, type d'appareil et de navigateur, adresse IP
+    tronquée ou approximative.
+  </p>
+
+  <h2>3. Finalités</h2>
+  <ul>
+    <li>Répondre à vos demandes et établir des devis.</li>
+    <li>Assurer le suivi de la relation commerciale.</li>
+    <li>Mesurer la fréquentation du site et améliorer son contenu.</li>
+  </ul>
+  <p>Vos données ne sont jamais vendues ni louées à des tiers.</p>
+
+  <h2>4. Durée de conservation</h2>
+  <ul>
+    <li>Demandes de contact sans suite : 3 ans maximum après le dernier échange.</li>
+    <li>Données clients : pendant la relation commerciale, puis selon les obligations légales et comptables.</li>
+    <li>Cookies de mesure d'audience : 13 mois maximum.</li>
+  </ul>
+
+  <h2>5. Destinataires et transferts</h2>
+  <p>
+    Vos données sont destinées uniquement à l'équipe FRIDEVS. Certains prestataires techniques
+    (Vercel pour l'hébergement, Google pour la mesure d'audience, Meta pour WhatsApp) peuvent traiter
+    des données hors de votre pays, notamment aux États-Unis, dans le cadre de leurs garanties contractuelles.
+  </p>
+
+  <h2>6. Vos droits</h2>
+  <p>
+    Conformément à la réglementation applicable en matière de protection des données personnelles
+    (notamment la législation camerounaise et, pour les visiteurs de l'Union européenne, le RGPD),
+    vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de limitation du
+    traitement de vos données.
+  </p>
+  <p>
+    Pour exercer ces droits, écrivez à <a href={`mailto:${email}`}>{email}</a>. Nous répondons dans un
+    délai d'un mois.
+  </p>
+
+  <h2>7. Cookies</h2>
+  <p>
+    Lors de votre première visite, un bandeau vous permet d'accepter ou de refuser les cookies de mesure
+    d'audience. Tant que vous n'avez pas accepté, aucun cookie de mesure n'est déposé. Vous pouvez modifier
+    votre choix à tout moment via le lien « Gérer les cookies » en bas de chaque page.
+  </p>
+  <p>
+    Vous pouvez aussi bloquer ou supprimer les cookies depuis les paramètres de votre navigateur.
+    Le refus des cookies de mesure d'audience n'empêche pas l'utilisation du site.
+  </p>
+
+  <h2>8. Modifications</h2>
+  <p>
+    Cette politique peut être mise à jour. La date de dernière mise à jour figure en haut de cette page.
+  </p>
+</LegalPage>

@@ -1,21 +1,30 @@
 ---
+import "@fontsource-variable/inter";
+import "@fontsource-variable/space-grotesk";
+import "@fontsource-variable/dm-sans";
 import "../styles/global.css";
+import CookieBanner from "../components/CookieBanner.astro";
 
 interface Props {
   title?: string;
   description?: string;
   image?: string;
   type?: string;
+  noindex?: boolean;
 }
 
 const {
   title = "FRIDEVS - Solutions Digitales Sur Mesure | Développement Web & Mobile",
   description = "Nous développons des sites web, applications et outils métiers performants pour accélérer la croissance de votre entreprise. Expertise en développement web/mobile, solutions métiers, SEO et UI/UX.",
-  image = "/images/f.png",
-  type = "website"
+  image = "/images/og-fridevs.png",
+  type = "website",
+  noindex = false
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// URL propre : sans ".html", sans "/index" et sans slash final (sauf la racine)
+const cleanPath =
+  Astro.url.pathname.replace(/\.html$/, "").replace(/\/index$/, "").replace(/\/+$/, "") || "/";
+const canonicalURL = new URL(cleanPath, Astro.site);
 ---
 
 <html lang="fr">
@@ -26,9 +35,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- SEO Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
     <meta name="author" content="FRIDEVS" />
-    <meta name="keywords" content="développement web, application mobile, solutions métiers, SEO, UI/UX, agence digitale, Cameroun" />
     <link rel="canonical" href={canonicalURL} />
     
     <!-- Preload critical images -->
@@ -40,6 +48,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FRIDEVS - Solutions digitales sur mesure" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:site_name" content="FRIDEVS" />
     
@@ -51,8 +62,27 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:image" content={new URL(image, Astro.site)} />
     
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="/images/icon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0B0E14" />
     
+    <!-- Consent Mode v2 : mesure d'audience refusée par défaut, jusqu'au choix du visiteur -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      var fridevsConsent = null;
+      try { fridevsConsent = localStorage.getItem('fridevs-consent'); } catch (e) {}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: fridevsConsent === 'granted' ? 'granted' : 'denied',
+        wait_for_update: 500
+      });
+    </script>
+
     <!-- Google Tag Manager -->
     <script is:inline>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -63,17 +93,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </script>
     <!-- End Google Tag Manager -->
     
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
-    
-    <!-- Fonts - Optimisées pour performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    </noscript>
+    <!-- Polices auto-hébergées (@fontsource-variable), importées dans le frontmatter -->
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -97,17 +117,36 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         "sameAs": [
           "https://wa.me/237694634551",
           "https://www.facebook.com/profile.php?id=61577729167828",
-          "https://www.instagram.com/fridevs237/"
+          "https://www.instagram.com/fridev2/"
         ]
       }
     </script>
   </head>
-  <body class="text-gray-800 bg-[#0B0E14] overflow-x-hidden" style="font-family: 'Inter', system-ui, sans-serif;">
+  <body class="text-gray-800 bg-[#0B0E14] overflow-x-hidden" style="font-family: 'Inter Variable', system-ui, sans-serif;">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5WKSRJ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
     <slot />
+
+    <CookieBanner />
+
+    <!-- Suivi des conversions : événements envoyés à GTM (dataLayer) -->
+    <script is:inline>
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        var event = null;
+        if (href.indexOf('wa.me/') !== -1) event = 'whatsapp_click';
+        else if (href.indexOf('play.google.com') !== -1) event = 'playstore_click';
+        else if (href.indexOf('mailto:') === 0) event = 'email_click';
+        else if (href.indexOf('tel:') === 0) event = 'phone_click';
+        if (!event) return;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: event, link_url: href, page_path: location.pathname });
+      });
+    </script>
   </body>
 </html>

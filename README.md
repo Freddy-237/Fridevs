@@ -1,46 +1,42 @@
-# Astro Starter Kit: Basics
+# FRIDEVS — site vitrine
 
-```sh
-npm create astro@latest -- --template basics
+Site de l'agence FRIDEVS : [fridevs.com](https://fridevs.com).
+Astro 5 + Tailwind CSS 4, site 100 % statique déployé sur Vercel.
+
+## Commandes
+
+| Commande          | Action                                           |
+| ----------------- | ------------------------------------------------ |
+| `npm install`     | Installe les dépendances                         |
+| `npm run dev`     | Serveur local sur `http://localhost:4321`        |
+| `npm run build`   | Génère le site dans `dist/`                      |
+| `npm run preview` | Prévisualise le build de production en local     |
+
+## Structure
+
+```
+public/            fichiers servis tels quels (images, JS, favicons, robots.txt)
+src/components/    sections réutilisables (Header, Footer, Hero, CookieBanner…)
+src/layouts/       Layout.astro (SEO, GTM, consentement) et LegalPage.astro
+src/pages/         une page = une URL (realisations/ contient les études de cas)
+src/styles/        global.css (Tailwind + styles globaux)
+vercel.json        en-têtes de cache et de sécurité, URLs propres
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Déploiement
 
-## 🚀 Project Structure
+- Chaque push sur `main` déploie automatiquement en production sur Vercel.
+- Chaque autre branche obtient une URL de prévisualisation.
+- Les URLs n'ont ni `.html` ni slash final (`/about`), grâce à `cleanUrls` et
+  `trailingSlash: false` dans `vercel.json`, et `trailingSlash: 'never'` dans `astro.config.mjs`.
 
-Inside of your Astro project, you'll see the following folders and files:
+## À savoir
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Tarifs** : affichés dans `src/components/SolutionsFridevs.astro`, `src/pages/services.astro` (section `#tarifs`)
+  et la FAQ de `src/pages/contact.astro`. Penser à mettre à jour les trois.
+- **Mentions légales** : les informations de l'éditeur sont en haut de `src/pages/mentions-legales.astro`.
+- **Analytics** : GTM `GTM-NN5WKSRJ`, Consent Mode v2 (mesure refusée par défaut jusqu'à acceptation).
+  Événements envoyés au `dataLayer` : `whatsapp_click`, `playstore_click`, `email_click`, `phone_click`,
+  `contact_form_submit`, `cookie_consent_granted` / `cookie_consent_denied`.
+- **Polices** : auto-hébergées via `@fontsource-variable` (noms CSS : `'Inter Variable'`, `'Space Grotesk Variable'`,
+  `'DM Sans Variable'`).

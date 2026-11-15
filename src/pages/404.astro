@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Page introuvable | FRIDEVS"
+  description="Cette page n'existe pas ou a été déplacée."
+  noindex
+>
+  <Header />
+
+  <main class="min-h-[75vh] flex items-center bg-gradient-to-b from-[#0B0E14] to-[#1a062e] pt-32 pb-20">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="text-8xl md:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 mb-6" style="font-family: 'DM Sans Variable', sans-serif;">
+        404
+      </p>
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans Variable', sans-serif;">
+        Cette page est introuvable
+      </h1>
+      <p class="text-lg text-gray-400 mb-10">
+        Le lien est peut-être erroné ou la page a été déplacée. Pas de panique, on vous ramène en lieu sûr.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors">
+          Retour à l'accueil
+        </a>
+        <a href="/contact" class="px-8 py-4 border-2 border-gray-700 hover:border-purple-500 text-white font-semibold rounded-lg transition-colors">
+          Nous contacter
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
