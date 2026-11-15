@@ -18,7 +18,7 @@
     </a>
 
     <!-- Desktop Menu -->
-    <nav class="hidden md:flex items-center gap-8 text-lg font-medium tracking-wide" style="font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;">
+    <nav aria-label="Navigation principale" class="hidden md:flex items-center gap-8 text-lg font-medium tracking-wide" style="font-family: 'Space Grotesk Variable', 'Inter Variable', system-ui, sans-serif;">
       <a href="/" class="text-gray-300 hover:text-purple-400 transition-colors duration-200">Accueil</a>
       <a href="/services" class="text-gray-300 hover:text-purple-400 transition-colors duration-200">Services</a>
       <a href="/realisations" class="text-gray-300 hover:text-purple-400 transition-colors duration-200">Réalisations</a>
@@ -27,7 +27,7 @@
     </nav>
 
     <!-- CTA Button avec glow effect -->
-    <a href="https://wa.me/237694634551" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center px-5 py-2.5 bg-purple-600 hover:bg-purple-700 transition-all duration-300 rounded-lg font-semibold shadow-lg hover:shadow-purple-500/50 text-sm" style="font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;">
+    <a href="https://wa.me/237694634551" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center px-5 py-2.5 bg-purple-600 hover:bg-purple-700 transition-all duration-300 rounded-lg font-semibold shadow-lg hover:shadow-purple-500/50 text-sm" style="font-family: 'Space Grotesk Variable', 'Inter Variable', system-ui, sans-serif;">
       Demander un devis
       <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -35,13 +35,13 @@
     </a>
 
     <!-- Mobile Menu Button -->
-    <button id="mobile-menu-btn" class="md:hidden text-white text-3xl">
+    <button id="mobile-menu-btn" type="button" class="md:hidden text-white text-3xl" aria-label="Ouvrir le menu" aria-controls="mobile-menu" aria-expanded="false">
       ☰
     </button>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden hidden flex-col bg-[#0B0E14] px-6 pb-4 space-y-4 text-lg border-t border-gray-800" style="font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;">
+  <div id="mobile-menu" class="md:hidden hidden flex-col bg-[#0B0E14] px-6 pb-4 space-y-4 text-lg border-t border-gray-800" style="font-family: 'Space Grotesk Variable', 'Inter Variable', system-ui, sans-serif;">
     <a href="/" class="block py-3 hover:text-purple-300 transition-colors">Accueil</a>
     <a href="/services" class="block py-3 hover:text-purple-300 transition-colors">Services</a>
     <a href="/realisations" class="block py-3 hover:text-purple-300 transition-colors">Réalisations</a>

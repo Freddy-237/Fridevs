@@ -1,0 +1,81 @@
+---
+/**
+ * BANDEAU DE CONSENTEMENT AUX COOKIES
+ *
+ * Fonctionne avec le Consent Mode v2 de Google déclaré dans Layout.astro :
+ * - par défaut, la mesure d'audience est refusée (analytics_storage = denied) ;
+ * - « Accepter » l'active, « Refuser » la laisse désactivée ;
+ * - le choix est mémorisé dans le navigateur (clé localStorage "fridevs-consent").
+ * Tout lien portant l'attribut data-cookie-settings rouvre le bandeau.
+ */
+---
+
+<div
+  id="cookie-banner"
+  class="hidden fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:bottom-6 md:max-w-md z-[60] bg-[#111827] border border-purple-500/30 rounded-2xl shadow-2xl shadow-black/50 p-6 text-sm text-gray-300"
+  role="dialog"
+  aria-live="polite"
+  aria-label="Consentement aux cookies"
+>
+  <p class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk Variable', sans-serif;">
+    Cookies de mesure d'audience
+  </p>
+  <p class="mb-4 leading-relaxed">
+    Nous utilisons des cookies pour mesurer la fréquentation du site et l'améliorer. Aucune publicité,
+    aucune revente de données.
+    <a href="/politique-confidentialite" class="text-purple-400 underline hover:text-purple-300">En savoir plus</a>
+  </p>
+  <div class="flex gap-3">
+    <button
+      type="button"
+      data-consent="denied"
+      class="flex-1 px-4 py-2.5 rounded-lg border border-gray-600 hover:border-purple-500 text-white font-semibold transition-colors"
+    >
+      Refuser
+    </button>
+    <button
+      type="button"
+      data-consent="granted"
+      class="flex-1 px-4 py-2.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-semibold transition-colors"
+    >
+      Accepter
+    </button>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var KEY = 'fridevs-consent';
+    var banner = document.getElementById('cookie-banner');
+    if (!banner) return;
+
+    function read() {
+      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    }
+    function save(value) {
+      try { localStorage.setItem(KEY, value); } catch (e) {}
+    }
+    function show() { banner.classList.remove('hidden'); }
+    function hide() { banner.classList.add('hidden'); }
+
+    banner.querySelectorAll('[data-consent]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var value = btn.getAttribute('data-consent');
+        save(value);
+        if (typeof window.gtag === 'function') {
+          window.gtag('consent', 'update', { analytics_storage: value });
+        }
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'cookie_consent_' + value });
+        hide();
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest && e.target.closest('[data-cookie-settings]');
+      if (link) { e.preventDefault(); show(); }
+    });
+
+    if (!read()) show();
+  })();
+</script>

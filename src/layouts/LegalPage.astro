@@ -1,0 +1,76 @@
+---
+/**
+ * Gabarit commun aux pages légales (mentions légales, confidentialité).
+ */
+import Layout from "./Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  heading: string;
+  updated: string;
+}
+
+const { title, description, heading, updated } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <main>
+    <section class="relative overflow-hidden bg-gradient-to-b from-[#3B2667] via-[#553C9A] to-[#7C3AED] pt-32 pb-16">
+      <div class="relative max-w-4xl mx-auto px-6 text-center">
+        <nav class="text-sm text-gray-300 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white transition-colors">Accueil</a>
+          <span class="mx-2">/</span>
+          <span class="text-white">{heading}</span>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-bold text-white" style="font-family: 'DM Sans Variable', sans-serif;">
+          {heading}
+        </h1>
+        <p class="mt-4 text-gray-200 text-sm">Dernière mise à jour : {updated}</p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#0B0E14]">
+      <div class="legal max-w-3xl mx-auto px-6 text-gray-300 leading-relaxed">
+        <slot />
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .legal :global(h2) {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    font-family: 'DM Sans Variable', sans-serif;
+  }
+  .legal :global(h2:first-child) {
+    margin-top: 0;
+  }
+  .legal :global(p),
+  .legal :global(ul) {
+    margin-bottom: 1rem;
+  }
+  .legal :global(ul) {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+  .legal :global(li) {
+    margin-bottom: 0.4rem;
+  }
+  .legal :global(a) {
+    color: #c084fc;
+    text-decoration: underline;
+  }
+  .legal :global(strong) {
+    color: #fff;
+  }
+</style>

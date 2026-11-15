@@ -39,6 +39,9 @@ if (form) {
     
     // Redirection vers WhatsApp
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'contact_form_submit', project_type: projectType, budget: budget || 'non précisé' });
+
     window.open(whatsappUrl, '_blank');
 
     // Message de confirmation
