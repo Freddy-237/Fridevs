@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import { fileURLToPath } from "node:url";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 
@@ -12,5 +13,11 @@ export default defineConfig({
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      // Three.js copié localement (src/lib/three) : les modules d'effets importent "three"
+      alias: {
+        three: fileURLToPath(new URL("./src/lib/three/three.module.js", import.meta.url)),
+      },
+    },
   },
 });
