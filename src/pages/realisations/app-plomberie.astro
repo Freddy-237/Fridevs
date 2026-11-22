@@ -11,6 +11,8 @@ import Footer from "../../components/Footer.astro";
 
 const pageTitle = "Étude de Cas : Application Mobile Plomberie | FRIDEVS";
 const pageDescription = "Application mobile complète pour la gestion d'interventions de plomberie avec géolocalisation et réservation en temps réel.";
+const playStoreUrl = "https://play.google.com/store/apps/details?id=com.fridevs.plumber";
+import Scene3D from "../../components/Scene3D.astro";
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -45,7 +47,7 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
               </span>
             </div>
 
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight" style="font-family: 'DM Sans', sans-serif;">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight" style="font-family: 'DM Sans Variable', sans-serif;">
               Application Mobile Plomberie
             </h1>
 
@@ -68,17 +70,36 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
               </div>
               <div>
                 <p class="text-gray-500 text-sm mb-1">Plateformes</p>
-                <p class="text-white font-semibold text-lg">iOS & Android</p>
+                <p class="text-white font-semibold text-lg">Android (Google Play)</p>
               </div>
             </div>
+
+            <a
+              href={playStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-3 px-6 py-3 bg-black hover:bg-gray-900 border border-gray-700 hover:border-purple-500 rounded-xl text-white transition-all duration-300"
+              aria-label="Télécharger l'application sur Google Play"
+            >
+              <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l.1.1 9.9-9.9v-.2L3.7 1.7l-.1.1zm13.3 13.4-3.3-3.3v-.2l3.3-3.3.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3l-3.9 2.2h-.1zm-.1.1L13.4 12 3.6 21.8c.4.4 1 .4 1.7.1l11.5-6.6M16.8 8.7 5.3 2.1c-.7-.4-1.3-.3-1.7.1l9.8 9.8 3.4-3.3z"/>
+              </svg>
+              <span class="text-left leading-tight">
+                <span class="block text-xs text-gray-400">Disponible sur</span>
+                <span class="block text-lg font-semibold">Google Play</span>
+              </span>
+            </a>
 
           </div>
 
           <div class="relative">
-            <div class="aspect-square bg-gradient-to-br from-purple-900/30 to-purple-600/20 rounded-2xl border border-purple-500/30 flex items-center justify-center backdrop-blur-sm">
-              <svg class="w-40 h-40 text-purple-400/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
+            <div class="relative overflow-hidden aspect-square bg-gradient-to-br from-purple-900/30 to-purple-600/20 rounded-2xl border border-purple-500/30 backdrop-blur-sm">
+              <div class="scene3d-fallback absolute inset-0 flex items-center justify-center">
+                <svg class="w-40 h-40 text-purple-400/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <Scene3D scene="phone" label="Plomberie" accent="#2563eb" />
             </div>
           </div>
 
@@ -95,14 +116,14 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
         <div class="space-y-8">
           
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans Variable', sans-serif;">
               Contexte & Objectif
             </h2>
             <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full"></div>
           </div>
 
           <div class="bg-[#0B0E14] rounded-2xl p-8 border border-gray-800">
-            <h3 class="text-xl font-bold text-purple-400 mb-4" style="font-family: 'Space Grotesk', sans-serif;">
+            <h3 class="text-xl font-bold text-purple-400 mb-4" style="font-family: 'Space Grotesk Variable', sans-serif;">
               Le client
             </h3>
             <p class="text-gray-300 text-lg leading-relaxed">
@@ -111,7 +132,7 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
           </div>
 
           <div class="bg-[#0B0E14] rounded-2xl p-8 border border-gray-800">
-            <h3 class="text-xl font-bold text-purple-400 mb-4" style="font-family: 'Space Grotesk', sans-serif;">
+            <h3 class="text-xl font-bold text-purple-400 mb-4" style="font-family: 'Space Grotesk Variable', sans-serif;">
               Le problème initial
             </h3>
             <ul class="space-y-3 text-gray-300 text-lg">
@@ -154,7 +175,7 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
         <div class="space-y-8">
           
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans Variable', sans-serif;">
               La solution FRIDEVS
             </h2>
             <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full"></div>
@@ -265,7 +286,7 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
         <div class="space-y-8">
           
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans Variable', sans-serif;">
               Stack technique
             </h2>
             <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full"></div>
@@ -353,7 +374,7 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
         <div class="space-y-8">
           
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans', sans-serif;">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'DM Sans Variable', sans-serif;">
               Résultats obtenus
             </h2>
             <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full"></div>
@@ -374,7 +395,7 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
                 4.3/5
               </div>
               <p class="text-xl text-gray-300 font-semibold mb-2">Note moyenne</p>
-              <p class="text-gray-400 text-sm">Sur les app stores</p>
+              <p class="text-gray-400 text-sm">Sur Google Play</p>
             </div>
 
             <div class="bg-gradient-to-br from-purple-900/20 to-purple-600/10 rounded-2xl p-8 border border-purple-500/30 text-center">
@@ -388,7 +409,7 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
           </div>
 
           <div class="bg-[#111827] rounded-2xl p-8 border border-gray-800">
-            <h3 class="text-xl font-bold text-purple-400 mb-6" style="font-family: 'Space Grotesk', sans-serif;">
+            <h3 class="text-xl font-bold text-purple-400 mb-6" style="font-family: 'Space Grotesk Variable', sans-serif;">
               Bénéfices concrets
             </h3>
             <ul class="space-y-4 text-gray-300 text-lg">
@@ -452,7 +473,7 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
     <section class="py-20 bg-[#111827]">
       <div class="max-w-4xl mx-auto px-6 text-center">
         
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" style="font-family: 'DM Sans', sans-serif;">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" style="font-family: 'DM Sans Variable', sans-serif;">
           Vous avez un projet similaire ?
         </h2>
 
@@ -467,7 +488,7 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
             target="_blank" 
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105"
-            style="font-family: 'Space Grotesk', sans-serif;"
+            style="font-family: 'Space Grotesk Variable', sans-serif;"
           >
             Demander un devis
             <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -475,10 +496,20 @@ const pageDescription = "Application mobile complète pour la gestion d'interven
             </svg>
           </a>
 
+          <a
+            href={playStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-8 py-4 bg-transparent hover:bg-white/5 text-white text-lg font-semibold rounded-lg transition-all duration-300 border-2 border-gray-700 hover:border-purple-500"
+            style="font-family: 'Space Grotesk Variable', sans-serif;"
+          >
+            Voir sur Google Play
+          </a>
+
           <a 
             href="/realisations" 
             class="inline-flex items-center justify-center px-8 py-4 bg-transparent hover:bg-white/5 text-white text-lg font-semibold rounded-lg transition-all duration-300 border-2 border-gray-700 hover:border-purple-500"
-            style="font-family: 'Space Grotesk', sans-serif;"
+            style="font-family: 'Space Grotesk Variable', sans-serif;"
           >
             Voir d'autres projets
           </a>

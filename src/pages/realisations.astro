@@ -11,6 +11,7 @@ import Footer from "../components/Footer.astro";
 
 const pageTitle = "Nos Réalisations - Études de Cas | FRIDEVS";
 const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, applications mobiles, solutions métiers. Résultats mesurables et expertise prouvée.";
+import Scene3D from "../components/Scene3D.astro";
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -36,7 +37,7 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
         </nav>
 
         <!-- Titre -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style="font-family: 'DM Sans', sans-serif;">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style="font-family: 'DM Sans Variable', sans-serif;">
           Des projets conçus pour créer de la 
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
             valeur
@@ -87,11 +88,13 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                 <!-- <img src="/images/projects/inubil.jpg" alt="Aperçu du projet INUBIL" class="w-full h-full object-cover" /> -->
                 
                 <!-- Placeholder temporaire -->
-                <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
+                <div class="scene3d-fallback absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
                   <svg class="w-32 h-32 text-purple-500/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
                 </div>
+
+                <Scene3D scene="dashboard" label="INUBIL" accent="#8b5cf6" />
 
                 <!-- Overlay violet -->
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-purple-900/0 group-hover:from-purple-600/70 group-hover:to-purple-900/70 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -114,7 +117,7 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                 </div>
 
                 <!-- Nom projet -->
-                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk', sans-serif;">
+                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk Variable', sans-serif;">
                   INUBIL
                 </h3>
 
@@ -135,58 +138,6 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
             </div>
           </a>
 
-          <!-- Projet 2: Application E-commerce -->
-          <a href="/realisations/app-ecommerce" class="project-item group block" data-category="mobile">
-            <div class="bg-[#111827] rounded-2xl overflow-hidden border border-gray-800 hover:border-purple-500/50 transition-all duration-500 h-full">
-              
-              <div class="relative h-80 overflow-hidden bg-[#1a1a2e]">
-                
-                <!-- TODO: Remplacer par une vraie image du projet -->
-                <!-- <img src="/images/projects/app-ecommerce.jpg" alt="Aperçu de l'application E-commerce" class="w-full h-full object-cover" /> -->
-                
-                <!-- Placeholder temporaire -->
-                <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
-                  <svg class="w-32 h-32 text-purple-500/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                </div>
-
-                <div class="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-purple-900/0 group-hover:from-purple-600/70 group-hover:to-purple-900/70 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <div class="text-center space-y-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="text-white font-bold text-xl block">Voir l'étude de cas</span>
-                    <svg class="w-8 h-8 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <div class="p-6 space-y-4">
-                
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-purple-600/10 text-purple-400 text-xs font-medium rounded-full">Mobile</span>
-                  <span class="px-3 py-1 bg-purple-600/10 text-purple-400 text-xs font-medium rounded-full">E-commerce</span>
-                </div>
-
-                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk', sans-serif;">
-                  Application E-commerce
-                </h3>
-
-                <p class="text-gray-400 leading-relaxed">
-                  Application mobile native iOS/Android offrant une expérience shopping fluide et personnalisée.
-                </p>
-
-                <div class="flex items-center gap-2 text-sm text-purple-400 pt-2">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                  <span>Application mobile</span>
-                </div>
-
-              </div>
-            </div>
-          </a>
-
           <!-- Projet 3: App Plomberie -->
           <a href="/realisations/app-plomberie" class="project-item group block" data-category="mobile">
             <div class="bg-[#111827] rounded-2xl overflow-hidden border border-gray-800 hover:border-purple-500/50 transition-all duration-500 h-full">
@@ -197,11 +148,13 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                 <!-- <img src="/images/projects/app-plomberie.jpg" alt="Aperçu de l'application Plomberie" class="w-full h-full object-cover" /> -->
                 
                 <!-- Placeholder temporaire -->
-                <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
+                <div class="scene3d-fallback absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
                   <svg class="w-32 h-32 text-purple-500/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
+
+                <Scene3D scene="phone" label="Plomberie" accent="#2563eb" />
 
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-purple-900/0 group-hover:from-purple-600/70 group-hover:to-purple-900/70 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
                   <div class="text-center space-y-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -220,7 +173,7 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                   <span class="px-3 py-1 bg-purple-600/10 text-purple-400 text-xs font-medium rounded-full">Service</span>
                 </div>
 
-                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk', sans-serif;">
+                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk Variable', sans-serif;">
                   Application Plomberie
                 </h3>
 
@@ -249,11 +202,13 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                 <!-- <img src="/images/projects/socacom.jpg" alt="Aperçu du site SOCACOM" class="w-full h-full object-cover" /> -->
                 
                 <!-- Placeholder temporaire -->
-                <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
+                <div class="scene3d-fallback absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
                   <svg class="w-32 h-32 text-purple-500/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
+
+                <Scene3D scene="website" label="SOCACOM" tag="BTP" accent="#f59e0b" />
 
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-purple-900/0 group-hover:from-purple-600/70 group-hover:to-purple-900/70 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
                   <div class="text-center space-y-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -272,7 +227,7 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                   <span class="px-3 py-1 bg-purple-600/10 text-purple-400 text-xs font-medium rounded-full">BTP</span>
                 </div>
 
-                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk', sans-serif;">
+                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk Variable', sans-serif;">
                   SOCACOM
                 </h3>
 
@@ -301,11 +256,13 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                 <!-- <img src="/images/projects/anael.jpg" alt="Aperçu du site ANAEL Entreprises" class="w-full h-full object-cover" /> -->
                 
                 <!-- Placeholder temporaire -->
-                <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
+                <div class="scene3d-fallback absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
                   <svg class="w-32 h-32 text-purple-500/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
+
+                <Scene3D scene="website" label="ANAEL" tag="Groupe" accent="#2563eb" />
 
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-purple-900/0 group-hover:from-purple-600/70 group-hover:to-purple-900/70 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
                   <div class="text-center space-y-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -324,7 +281,7 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                   <span class="px-3 py-1 bg-purple-600/10 text-purple-400 text-xs font-medium rounded-full">Groupe</span>
                 </div>
 
-                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk', sans-serif;">
+                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk Variable', sans-serif;">
                   ANAEL Entreprises
                 </h3>
 
@@ -353,11 +310,13 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                 <!-- <img src="/images/projects/patc.jpg" alt="Aperçu du site PATC SARL" class="w-full h-full object-cover" /> -->
                 
                 <!-- Placeholder temporaire -->
-                <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
+                <div class="scene3d-fallback absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
                   <svg class="w-32 h-32 text-purple-500/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
+
+                <Scene3D scene="website" label="PATC SARL" tag="Corporate" accent="#0d9488" />
 
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-purple-900/0 group-hover:from-purple-600/70 group-hover:to-purple-900/70 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
                   <div class="text-center space-y-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -376,7 +335,7 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                   <span class="px-3 py-1 bg-purple-600/10 text-purple-400 text-xs font-medium rounded-full">Corporate</span>
                 </div>
 
-                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk', sans-serif;">
+                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk Variable', sans-serif;">
                   PATC SARL
                 </h3>
 
@@ -405,11 +364,13 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                 <!-- <img src="/images/projects/inubil-institut.jpg" alt="Aperçu du site INUBIL" class="w-full h-full object-cover" /> -->
                 
                 <!-- Placeholder temporaire -->
-                <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
+                <div class="scene3d-fallback absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-purple-800/20">
                   <svg class="w-32 h-32 text-purple-500/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
+
+                <Scene3D scene="website" label="INUBIL" tag="Éducation" accent="#7c3aed" />
 
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-purple-900/0 group-hover:from-purple-600/70 group-hover:to-purple-900/70 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
                   <div class="text-center space-y-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -428,7 +389,7 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
                   <span class="px-3 py-1 bg-purple-600/10 text-purple-400 text-xs font-medium rounded-full">Éducation</span>
                 </div>
 
-                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk', sans-serif;">
+                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style="font-family: 'Space Grotesk Variable', sans-serif;">
                   INUBIL
                 </h3>
 
@@ -457,7 +418,7 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
     <section class="py-16 bg-[#111827]">
       <div class="max-w-4xl mx-auto px-6 text-center">
         
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" style="font-family: 'DM Sans', sans-serif;">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" style="font-family: 'DM Sans Variable', sans-serif;">
           Vous avez un projet similaire ?
         </h2>
 
@@ -470,7 +431,7 @@ const pageDescription = "Découvrez nos projets concrets : CRM sur mesure, appli
           target="_blank" 
           rel="noopener noreferrer"
           class="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105"
-          style="font-family: 'Space Grotesk', sans-serif;"
+          style="font-family: 'Space Grotesk Variable', sans-serif;"
         >
           Demander un devis gratuit
           <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

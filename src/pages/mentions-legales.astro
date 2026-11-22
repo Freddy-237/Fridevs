@@ -1,0 +1,76 @@
+---
+import LegalPage from "../layouts/LegalPage.astro";
+
+/**
+ * Informations sur l'éditeur.
+ * Les champs laissés vides ("") ne sont PAS affichés sur le site :
+ * complétez-les dès que possible (statut juridique, RCCM, adresse, responsable).
+ */
+const editeur = {
+  nom: "FRIDEVS",
+  statut: "", // ex. "Entreprise individuelle", "SARL au capital de ... FCFA"
+  rccm: "", // ex. "RC/DLA/2025/A/1234"
+  niu: "", // Numéro d'Identifiant Unique (contribuable)
+  adresse: "Bonamoussadi, Douala, Cameroun",
+  responsable: "", // Nom du directeur de la publication
+  email: "contact@fridevs.com",
+  telephone: "+237 6 94 63 45 51",
+};
+---
+
+<LegalPage
+  title="Mentions légales | FRIDEVS"
+  description="Mentions légales du site fridevs.com : éditeur, hébergeur, propriété intellectuelle et responsabilité."
+  heading="Mentions légales"
+  updated="15 novembre 2026"
+>
+  <h2>1. Éditeur du site</h2>
+  <p>Le site <strong>fridevs.com</strong> est édité par :</p>
+  <ul>
+    <li><strong>{editeur.nom}</strong>{editeur.statut && ` — ${editeur.statut}`}</li>
+    {editeur.rccm && <li>RCCM : {editeur.rccm}</li>}
+    {editeur.niu && <li>NIU : {editeur.niu}</li>}
+    {editeur.adresse && <li>Adresse : {editeur.adresse}</li>}
+    <li>E-mail : <a href={`mailto:${editeur.email}`}>{editeur.email}</a></li>
+    <li>Téléphone / WhatsApp : <a href="https://wa.me/237694634551">{editeur.telephone}</a></li>
+  </ul>
+  {editeur.responsable && <p>Directeur de la publication : {editeur.responsable}</p>}
+
+  <h2>2. Hébergement</h2>
+  <p>Le site est hébergé par :</p>
+  <ul>
+    <li><strong>Vercel Inc.</strong></li>
+    <li>440 N Barranca Ave #4133, Covina, CA 91723, États-Unis</li>
+    <li><a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel.com</a></li>
+  </ul>
+
+  <h2>3. Propriété intellectuelle</h2>
+  <p>
+    L'ensemble des contenus de ce site (textes, logos, visuels, mises en page, code) est la propriété de
+    {editeur.nom} ou de ses partenaires, sauf mention contraire. Toute reproduction, représentation ou
+    diffusion, totale ou partielle, sans autorisation écrite préalable est interdite.
+  </p>
+  <p>
+    Les marques et logos des clients présentés dans la rubrique Réalisations restent la propriété de leurs
+    titulaires respectifs.
+  </p>
+
+  <h2>4. Responsabilité</h2>
+  <p>
+    {editeur.nom} s'efforce de fournir des informations exactes et à jour, sans pouvoir garantir l'absence
+    d'erreurs ou d'omissions. Les liens vers des sites tiers sont fournis à titre indicatif ;
+    {editeur.nom} n'est pas responsable de leur contenu.
+  </p>
+
+  <h2>5. Données personnelles</h2>
+  <p>
+    Le traitement de vos données personnelles est décrit dans notre
+    <a href="/politique-confidentialite">politique de confidentialité</a>.
+  </p>
+
+  <h2>6. Contact</h2>
+  <p>
+    Pour toute question concernant le site, écrivez-nous à
+    <a href={`mailto:${editeur.email}`}>{editeur.email}</a>.
+  </p>
+</LegalPage>

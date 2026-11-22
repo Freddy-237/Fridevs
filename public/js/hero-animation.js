@@ -9,6 +9,9 @@
 
 // Attendre que le DOM soit chargé
 document.addEventListener('DOMContentLoaded', () => {
+
+  // Respecte le réglage système « réduire les animations »
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   
   // ========== ANIMATION DU TITRE MOTION ==========
   const heroTitle = document.querySelector('.hero-title-animated');

@@ -1,0 +1,80 @@
+---
+/**
+ * VISUEL 3D ANIMÉ
+ *
+ * À placer dans un cadre en position relative, juste après le visuel de repli
+ * (qui doit porter la classe "scene3d-fallback"). Quand la scène est prête, le cadre
+ * reçoit la classe "is-3d" : la 3D apparaît en fondu et le repli s'efface.
+ *
+ * scene : "website" | "phone" | "dashboard" | "laptop"
+ */
+interface Props {
+  scene: "website" | "phone" | "dashboard" | "laptop";
+  label?: string;
+  tag?: string;
+  accent?: string;
+}
+const { scene, label, tag, accent } = Astro.props;
+---
+
+<canvas
+  class="scene3d-canvas absolute inset-0 w-full h-full pointer-events-none"
+  data-scene={scene}
+  data-label={label}
+  data-tag={tag}
+  data-accent={accent}
+  aria-hidden="true"
+></canvas>
+
+<style is:global>
+  .scene3d-canvas {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+  .scene3d-fallback {
+    transition: opacity 0.6s ease;
+  }
+  .is-3d > .scene3d-canvas {
+    opacity: 1;
+  }
+  .is-3d > .scene3d-fallback {
+    opacity: 0;
+  }
+</style>
+
+<script>
+  /**
+   * Charge les scènes quand le premier cadre approche de l'écran.
+   * Pas de 3D (repli conservé) : économie de données, appareil modeste, pas de WebGL.
+   * Animations réduites : scènes affichées en image fixe.
+   */
+  const canvases = Array.from(document.querySelectorAll<HTMLCanvasElement>("canvas.scene3d-canvas"));
+
+  function supported() {
+    const nav = navigator as Navigator & { connection?: { saveData?: boolean }; deviceMemory?: number };
+    if (nav.connection?.saveData) return false;
+    if ((nav.hardwareConcurrency || 4) < 4) return false;
+    if (nav.deviceMemory && nav.deviceMemory < 4) return false;
+    try {
+      const test = document.createElement("canvas");
+      return !!(test.getContext("webgl2") || test.getContext("webgl"));
+    } catch {
+      return false;
+    }
+  }
+
+  if (canvases.length && supported()) {
+    const staticMode = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((e) => e.isIntersecting)) return;
+        io.disconnect();
+        import("../scripts/scene3d/manager.js")
+          .then(({ initScenes }) => initScenes(canvases, { staticMode }))
+          .catch((err) => console.warn("Visuels 3D désactivés :", err));
+      },
+      { rootMargin: "400px" }
+    );
+    canvases.forEach((c) => io.observe(c));
+  }
+</script>

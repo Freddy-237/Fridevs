@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.classList.toggle("hidden");
       mobileMenu.classList.toggle("opacity-0");
       mobileMenu.classList.toggle("opacity-100");
+      const isOpen = !mobileMenu.classList.contains("hidden");
+      mobileMenuBtn.setAttribute("aria-expanded", String(isOpen));
+      mobileMenuBtn.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
   });
 
 

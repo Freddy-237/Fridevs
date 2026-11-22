@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 
 const pageTitle = "À Propos - FRIDEVS | Partenaire Digital de Confiance";
 const pageDescription = "FRIDEVS est une agence digitale spécialisée dans la conception de solutions web et applicatives sur mesure. Découvrez notre mission, nos valeurs et notre vision.";
+import Scene3D from "../components/Scene3D.astro";
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -29,7 +30,7 @@ const pageDescription = "FRIDEVS est une agence digitale spécialisée dans la c
         </nav>
 
         <!-- Titre -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style="font-family: 'DM Sans', sans-serif;">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style="font-family: 'DM Sans Variable', sans-serif;">
           FRIDEVS, partenaire digital de 
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
             confiance
@@ -63,11 +64,13 @@ const pageDescription = "FRIDEVS est une agence digitale spécialisée dans la c
           <!-- Droite : Visuel abstrait -->
           <div class="relative h-96 fade-in-right">
             <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-purple-900/20 rounded-2xl backdrop-blur-sm border border-purple-500/20">
-              <div class="absolute inset-0 flex items-center justify-center">
+              <div class="scene3d-fallback absolute inset-0 flex items-center justify-center">
                 <svg class="w-64 h-64 text-purple-500/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
+
+              <Scene3D scene="laptop" accent="#8b5cf6" />
             </div>
           </div>
         </div>

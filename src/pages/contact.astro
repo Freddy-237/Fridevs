@@ -29,7 +29,7 @@ const pageDescription = "Contactez FRIDEVS pour votre projet digital. Réponse r
         </nav>
 
         <!-- Titre -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight fade-in-up" style="font-family: 'DM Sans', sans-serif;">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight fade-in-up" style="font-family: 'DM Sans Variable', sans-serif;">
           Parlons de votre 
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
             projet
@@ -168,6 +168,7 @@ const pageDescription = "Contactez FRIDEVS pour votre projet digital. Réponse r
                   <option value="app-web">Application web</option>
                   <option value="app-mobile">Application mobile</option>
                   <option value="refonte">Refonte</option>
+                  <option value="deploiement-cloud">Déploiement / hébergement cloud</option>
                   <option value="autre">Autre</option>
                 </select>
                 <label 
@@ -180,13 +181,17 @@ const pageDescription = "Contactez FRIDEVS pour votre projet digital. Réponse r
 
               <!-- Budget -->
               <div class="relative">
-                <input 
-                  type="text" 
-                  id="budget" 
-                  name="budget" 
-                  class="w-full bg-[#0B0E14] border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all outline-none peer"
-                  placeholder=" "
-                />
+                <select
+                  id="budget"
+                  name="budget"
+                  class="w-full bg-[#0B0E14] border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all outline-none"
+                >
+                  <option value="">Je ne sais pas encore</option>
+                  <option value="50 000 – 150 000 FCFA">50 000 – 150 000 FCFA</option>
+                  <option value="150 000 – 300 000 FCFA">150 000 – 300 000 FCFA</option>
+                  <option value="300 000 – 1 000 000 FCFA">300 000 – 1 000 000 FCFA</option>
+                  <option value="Plus de 1 000 000 FCFA">Plus de 1 000 000 FCFA</option>
+                </select>
                 <label 
                   for="budget" 
                   class="absolute left-3 top-[-10px] text-sm text-gray-400 bg-[#1a1a2e] px-2 transition-all duration-200"
@@ -272,7 +277,7 @@ const pageDescription = "Contactez FRIDEVS pour votre projet digital. Réponse r
                   </svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Téléphone / WhatsApp</h3>
-                <a href="https://wa.me/237694634551" target="_blank" class="text-purple-400 hover:text-purple-300 transition-colors">
+                <a href="https://wa.me/237694634551" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 transition-colors">
                   +237 694 634 551
                 </a>
               </div>
@@ -352,6 +357,18 @@ const pageDescription = "Contactez FRIDEVS pour votre projet digital. Réponse r
         <div class="max-w-3xl mx-auto space-y-4">
           
           <!-- FAQ 1 -->
+          <div class="faq-item bg-gradient-to-br from-[#1a1a2e] to-[#0B0E14] rounded-xl border border-gray-800 overflow-hidden fade-in-up">
+            <button class="faq-question w-full text-left p-6 flex items-center justify-between text-white hover:text-purple-400 transition-colors">
+              <span class="font-semibold text-lg">Combien coûte un site ou une application ?</span>
+              <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+              Nos sites web démarrent à 50 000 FCFA et nos applications web ou mobiles à 300 000 FCFA. Le prix final dépend du nombre de pages ou d'écrans et des fonctionnalités : nous vous envoyons un devis gratuit et détaillé sous 48h. <a href="/services#tarifs" class="text-purple-400 underline">Voir nos tarifs</a>
+            </div>
+          </div>
+
           <div class="faq-item bg-gradient-to-br from-[#1a1a2e] to-[#0B0E14] rounded-xl border border-gray-800 overflow-hidden fade-in-up">
             <button class="faq-question w-full text-left p-6 flex items-center justify-between text-white hover:text-purple-400 transition-colors">
               <span class="font-semibold text-lg">Quel est le délai de réponse ?</span>
